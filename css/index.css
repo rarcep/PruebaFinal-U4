@@ -1,0 +1,349 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 8, 2017, 9:28:22 PM
+    Author     : rarcep
+*/
+@font-face {
+    font-family: Dancing Script;
+    src: url(../fonts/DancingScript-Regular.ttf);
+}
+body{
+    font-family: 'Dancing Script';
+    background: #02010a;
+}
+.cabecera{
+    color:white;
+    background-color: #5b7989;
+    border-radius: 10px 10px 0px 0px;
+}
+footer{
+    background-color: #C6d5c5;    
+}
+tr{
+    padding: 0px 0px;
+}
+#contenido{
+    animation: animacionRebote 1s;
+}
+.footerTitulo{
+    font-size: 30px;
+}
+/*Seccion de Medias Queries*/
+/*Dispositivos Tablets*/
+@media(min-width:421px) and (max-width: 720px){
+}
+/*Dispositivos Moviles*/
+@media(max-width:900px){
+    #contenido{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .cabecera h1{
+        font-size: 38px;
+        width: 100%;
+        text-align: center;
+        text-shadow: 2px 2px #02010a;
+    }
+    #banner{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #banner nav ul {
+        margin: 0 auto;
+        text-align: center;
+        list-style: none;
+    }
+    #banner nav li {
+        display: inline;
+    }
+    #banner nav a:link, #banner nav a:visited {
+        color: #fff;
+        display: inline-block;
+        padding: 5px 10px;
+        text-decoration: none;
+    }
+    #banner nav a:active{
+        text-decoration: none;        
+    }
+    /*imagen centrada*/
+    #imagen1{
+        width: 100%;
+        background-color: #82c3a6;
+        text-align: center
+    }
+    #imagen1 #imagen{
+        margin: 0 auto;
+        padding: 20px 50px;
+        height: auto;
+    }
+    #imagen1 #imagen img{
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+    }
+    /*imagenes en dos columnas*/
+    #imagen23{
+        width: 100%;
+        background-color: #d5c75f;
+        text-align: center;
+        border: solid 1px black;
+    }
+    #imagen23 #imagen2, #imagen23 #imagen3{
+        margin: 0 auto;
+        padding: 20px 50px;
+        height: auto;
+    }
+    #imagen23 #imagen2 img, #imagen23 #imagen3 img{
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+    }
+    #imagen23 #imagen2 img:hover{
+        animation: animacionRotacion2 1s;
+    }
+    #imagen23 #imagen3 img:hover{
+        width: 100%;
+        animation: animacionRotacion3 1s;
+    }
+    /*Footer*/
+    footer{
+        width: 100%;
+    }
+    .contactos, .terminos, .redesSocial, .derechos{
+        padding: 10px;
+    }
+    .contactos{
+        width: 100%;
+    }
+    .contactos div{
+        padding: 0px;
+    }
+    .terminos{
+        width: 100%;
+    }
+    .redesSocial{
+        width: 100%;
+    }
+    .redesSocial img{
+        width: 20px;
+        height: 20px;
+    }
+    .derechos{
+        width: 100%;
+    }
+
+    /*Paisajes y Retratos*/
+    #paisajes-retratos{
+        width: 100%;
+        background-color: #d5c75f;
+        text-align: center;
+    }
+    div[class^='paisaje']{
+        display: inline-block;
+        padding: 10px;
+        margin: 20px;
+    }
+    div[class^='paisaje'] img{
+        height: auto;
+        width: 100%;
+    }
+    .paisaje-imagen1{
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+    }
+    .paisaje-imagen3{        
+        -webkit-filter: sepia(90%);
+        filter: sepia(90%);
+    }
+    .paisaje-imagen2, .paisaje-imagen4, .paisaje-imagen6{        
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+}
+/*Dispositivos Desktop*/
+@media(min-width:901px){
+    #contenido{
+        margin: 0 auto;
+        width: 900px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #banner{
+        margin: 0 auto; 
+        width: 900px;
+    }
+    /*Encabezado*****************/
+    .cabecera{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .cabecera h1{
+        margin: 10px auto;
+        text-align: left;
+        text-shadow: 2px 2px #02010a;
+    }
+
+    /* Listas */
+    #banner nav {
+        margin: 1.5em 50px;
+        text-align: right;
+        width: 50%;
+    }
+
+    #banner nav ul {list-style: none; margin: 0 auto; width: 100%;}    
+    #banner nav li {float: right; display: inline; margin: 0;}
+    #banner nav a:link, #banner nav a:visited {
+        color: #fff;
+        display: inline-block;
+        padding: 5px 10px;
+        text-decoration: none;
+    }
+    #banner nav a:active{
+        text-decoration: none;        
+    }
+
+    /*imagen centrada*/
+    #imagen1{
+        width: 900px;
+        background-color: #82c3a6;
+    }
+    #imagen1 img{
+        display: block;
+        margin: 20px auto;
+        width: 700px;
+        height: 400px;
+    }
+    /*imagenes en dos columnas*/
+    #imagen23{
+        width: 900px;
+        background-color: #d5c75f;
+        text-align: center;
+        display: -webkit-flex;
+        display: flex;
+        border: solid 1px black;
+    }
+    #imagen23 #imagen2 img{
+        width: 100%;
+        margin: 10px;
+        box-shadow: 2px 0px #82c3a6;
+    }
+    #imagen23 #imagen2 img:hover{
+        animation: animacionRotacion2 1s;
+    }
+    #imagen23 #imagen3 img{
+        width: 100%;
+        margin: 10px;
+        box-shadow: 2px 0px #82c3a6;
+    }
+    #imagen23 #imagen3 img:hover{
+        width: 100%;
+        margin: 10px;
+        animation: animacionRotacion3 1s;
+    }
+    /*Footer*/
+    footer{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 30px;
+    }
+    .contactos{
+        width: 25%;
+    }
+    .terminos{
+        width: 25%;
+    }
+    .redesSocial{
+        width: 25%;
+    }
+    .redesSocial img{
+        width: 20px;
+        height: 20px;
+    }
+    .derechos{
+        width: 25%;
+    }
+
+    /*Paisajes y Retratos*/
+    #paisajes-retratos{
+        width: 900px;
+        background-color: #d5c75f;
+        text-align: center;
+    }
+    div[class^='paisaje']{
+        display: inline-block;
+        width: 25%;
+        padding: 10px;
+        margin: 20px;
+    }
+    div[class^='paisaje'] img{
+        height: auto;
+        width: 100%;
+    }
+    .paisaje-imagen1{        
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+    }
+    .paisaje-imagen3{        
+        -webkit-filter: sepia(90%);
+        filter: sepia(90%);
+    }
+    .paisaje-imagen2, .paisaje-imagen4, .paisaje-imagen6{        
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+}
+
+/*Animaciones*/
+@-webkit-keyframes animacionRebote{
+    0%{            
+        margin-top: 150%;
+    }
+    60%{
+        margin-top: -5%;
+    }
+    100%{
+        margin-top: 0%;
+    }
+}
+@-webkit-keyframes animacionRotacion2{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(10deg);
+    }
+}
+@-webkit-keyframes animacionRotacion3{
+    from{
+        transform: translate(0px, 0px);
+    }
+    to{
+        transform: translate(5px, -20px);
+    }
+}
+
+@-webkit-keyframes animacionRotacion{
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(2deg);
+    }
+    40%{
+        transform: rotate(4deg);
+    }
+    60%{
+        transform: rotate(6deg);
+    }
+    80%{
+        transform: rotate(8deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
